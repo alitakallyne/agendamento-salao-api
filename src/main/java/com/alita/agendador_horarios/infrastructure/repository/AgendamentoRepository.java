@@ -1,8 +1,9 @@
-package com.javanauta.agendador_horarios.infrastructure.repository;
+package com.alita.agendador_horarios.infrastructure.repository;
 
-import com.javanauta.agendador_horarios.infrastructure.entity.Agendamento;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.alita.agendador_horarios.infrastructure.entity.Agendamento;
 
 import java.time.LocalDateTime;
 import java.util.List;

@@ -1,9 +1,10 @@
-package com.javanauta.agendador_horarios.services;
+package com.alita.agendador_horarios.services;
 
-import com.javanauta.agendador_horarios.infrastructure.entity.Agendamento;
-import com.javanauta.agendador_horarios.infrastructure.repository.AgendamentoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import com.alita.agendador_horarios.infrastructure.entity.Agendamento;
+import com.alita.agendador_horarios.infrastructure.repository.AgendamentoRepository;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

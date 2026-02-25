@@ -8,7 +8,7 @@
 		<version>4.0.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.javanauta</groupId>
+	<groupId>com.alita</groupId>
 	<artifactId>agendador-horarios</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>agendador-horarios</name>
