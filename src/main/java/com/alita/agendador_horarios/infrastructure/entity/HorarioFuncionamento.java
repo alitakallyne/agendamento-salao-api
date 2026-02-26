@@ -1,0 +1,33 @@
+package com.alita.agendador_horarios.infrastructure.entity;
+
+import java.time.DayOfWeek;
+import java.time.LocalTime;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "horario_funcionamento")
+public class HorarioFuncionamento {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private DayOfWeek diaSemana;
+
+    private LocalTime horaAbertura;
+
+    private LocalTime horaFechamento;
+}

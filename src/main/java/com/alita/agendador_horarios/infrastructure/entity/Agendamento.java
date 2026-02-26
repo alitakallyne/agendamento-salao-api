@@ -19,12 +19,26 @@ public class Agendamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String servico;
-    private String profissional;
-    private LocalDateTime dataHoraAgendamento;
-    private String cliente;
+
+    @ManyToOne
+    private Servico servico;
+
+    @ManyToOne
+    private Profissional profissional;
+
+    private LocalDateTime dataHoraInicio;
+
+    private LocalDateTime dataHoraFim;
+
+    @ManyToOne
+    private Cliente cliente;
+
     private String telefoneCliente;
+
     private LocalDateTime dataInsercao = LocalDateTime.now();
+
+    @Enumerated(EnumType.STRING)
+    private StatusAgendamento status;
 
 
 }
