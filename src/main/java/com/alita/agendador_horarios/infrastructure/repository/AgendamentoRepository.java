@@ -11,15 +11,21 @@ import java.util.List;
 
 public interface AgendamentoRepository extends JpaRepository<Agendamento, Long> {
 
-    // Método para encontrar agendamentos de um profissional em um intervalo de datas
-    List<Agendamento> findByProfissionalIdAndDataAgendamentoBetween( Profissional profissional, LocalDateTime start, LocalDateTime end);
+
+    // Buscar agendamentos de um profissional em um intervalo
+    List<Agendamento> findByProfissionalAndDataHoraInicioBetween(
+        Profissional profissional,
+        LocalDateTime inicio,
+        LocalDateTime fim
+    );
+
 
     // Método para verificar se existe um agendamento que se sobrepõe a um intervalo específico para um profissional
-     boolean existsByProfissionalAndDataHoraInicioLessThanAndDataHoraFimGreaterThan(
-            Profissional profissional,
-            LocalDateTime fim,
-            LocalDateTime inicio
-    );
+    boolean existsByProfissionalAndDataHoraInicioLessThanAndDataHoraFimGreaterThan(
+    Profissional profissional,
+    LocalDateTime fim,
+    LocalDateTime inicio
+);
 
     // Método para encontrar agendamentos que se sobrepõem a um intervalo específico
       List<Agendamento> findByDataHoraInicioBetween(
