@@ -33,8 +33,6 @@ public class Agendamento {
     @ManyToOne
     private Cliente cliente;
 
-    private String telefoneCliente;
-
     private LocalDateTime dataInsercao = LocalDateTime.now();
 
     @Enumerated(EnumType.STRING)
